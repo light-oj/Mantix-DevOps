@@ -1,0 +1,45 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clone Repository') {
+            steps {
+                script {
+                    // Ensure you're cloning the correct branch (main or master)
+                    git branch: 'master', url: 'https://github.com/startbootstrap/startbootstrap-freelancer.git'
+                }
+            }
+        }
+
+        stage('Install Dependencies via Chocolatey') {
+            steps {
+                script {
+                    // Call the Chocolatey script from Task 3 to install required software
+                    powershell 'C:/Users/azureuser/Documents/Install-Software.ps1'
+                }
+            }
+        }
+
+        stage('Deploy to IIS') {
+            steps {
+                script {
+                    // Execute the web app deployment script
+                    powershell 'C:/Users/azureuser/Documents/DeployWebApp.ps1'
+                }
+            }
+        }
+    }
+
+    post {
+        always {
+            echo 'Cleaning up workspace...'
+            cleanWs()
+        }
+        success {
+            echo 'Build and deployment successful!'
+        }
+        failure {
+            echo 'Build failed.'
+        }
+    }
+}

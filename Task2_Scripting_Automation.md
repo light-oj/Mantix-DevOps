@@ -76,3 +76,7 @@ Write-Host "Software installation and update process is complete."
    ```
 
 The script will install Chocolatey and check if the required software (Git, Node.js, Google Chrome, Docker Desktop) is installed. If any software is not found, it will automatically install it using Chocolatey.
+
+![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/images/372dd05147314a2797e839141b819a6e3010c31f170acd4e.png)  
+
+![](https://33333.cdn.cke-cs.com/kSW7V9NHUXugvhoQeFaf/images/a772113b420188ed02ff09f932b34c0c62c09f0c3692d700.png)

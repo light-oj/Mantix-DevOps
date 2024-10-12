@@ -20,7 +20,7 @@ Before you begin, ensure that you have the following:
    - Docker
    - Git
    - IIS
-3. Documentation on how to set up the environment is available in `Task1_EnvironmentSetup.md`.
+3. Documentation on how to set up the environment is available in `Task1_Environment_Setup.md`.
 
 ### Task 2: Scripting Automation
 - The PowerShell script `Install-Software.ps1` installs necessary software (e.g., Docker, Git, Node.js, and Google Chrome) via Chocolatey.
@@ -31,6 +31,7 @@ Before you begin, ensure that you have the following:
       ```bash
       powershell "C:/path/to/Install-Software.ps1"
       ```
+   3. Documentation is available in `Task2_Scripting_Automation.md`.
 
 ### Task 3: Configuration Management (Deploy to IIS)
 - The PowerShell script `DeployWebApp.ps1` automates the deployment of a web application to IIS.
@@ -42,6 +43,7 @@ Before you begin, ensure that you have the following:
       ```bash
       powershell "C:/path/to/DeployWebApp.ps1"
       ```
+   4. Documentation is available in `Task3_Web_App_Deployment_to_IIS.md`.
 
 ### Task 4: Jenkins Pipeline Setup
 - The Jenkins pipeline script `Jenkinsfile` automates the build and deployment process.
@@ -50,16 +52,19 @@ Before you begin, ensure that you have the following:
 1. **Clone Repository**: Fetches the source code from the GitHub repository.
 2. **Install Dependencies via Chocolatey**: Installs required dependencies using `Install-Software.ps1`.
 3. **Deploy to IIS**: Executes the deployment script `DeployWebApp.ps1` to deploy the application to IIS.
+4. Documentation is available in `Task4_Jenkin_Pipeline_Configuration.md`.
 
 #### How to Execute:
 1. Open Jenkins and create a new pipeline job.
-2. Configure the job to use the `Jenkinsfile` provided in this project.
+2. Configure the job and copy the pipeline script in `Jenkinsfile` provided in this project.
 3. Run the pipeline to automate the web app deployment process.
 
 ## File Structure
-- `Task1_EnvironmentSetup.md`: Documentation for Windows Server setup.
+- `Task1_Environment_Setup.md`: Documentation for Windows Server setup.
 - `Install-Software.ps1`: PowerShell script to install necessary software using Chocolatey.
+- `Task2_Scripting_Automation.md`: Documentation for Scripting Automation
 - `DeployWebApp.ps1`: PowerShell script to deploy the web app to IIS.
+- `Task3_Web_App_Deployment_to_IIS.md`: Documentation for Configuration Management
 - `Task4_JenkinsPipeline.md`: Explanation of the Jenkins pipeline stages.
 - `Jenkinsfile`: Jenkins pipeline script for automation.
 - `README.md`: This guide.
